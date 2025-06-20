@@ -1,3 +1,5 @@
+// App.tsx
+import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import "./App.css";
 import Chatbox from "./components/whatsapp/chatbox";
@@ -6,13 +8,12 @@ import { useWidgetConfig } from "./context/WidgetConfigContext";
 
 function App() {
   const { id, name } = useWidgetConfig();
-  console.log(id, name);
-
   const [toggel, setToggle] = useState(false);
+  console.log(id, name);
 
   return (
     <>
-      {toggel && <Chatbox />}
+      <AnimatePresence>{toggel && <Chatbox key="chatbox" />}</AnimatePresence>
       <FloatingIcon setToggle={setToggle} toggel={toggel} />
     </>
   );
