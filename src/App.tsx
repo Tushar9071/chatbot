@@ -5,11 +5,13 @@ import "./App.css";
 import Chatbox from "./components/whatsapp/chatbox";
 import FloatingIcon from "./components/whatsapp/floatingIcon";
 import { useWidgetConfig } from "./context/WidgetConfigContext";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 function App() {
   const { id, name } = useWidgetConfig();
   const [toggel, setToggle] = useState(false);
   console.log(id, name);
+  <SpeedInsights/>
 
   return (
     <>
