@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 import { WidgetConfigProvider } from "./context/WidgetConfigContext.tsx";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const containerId = "my-floating-widget-root";
 
@@ -16,6 +17,8 @@ function mountWidget() {
 
   createRoot(container).render(
     <StrictMode>
+      <SpeedInsights />
+
       <WidgetConfigProvider>
         <App />
       </WidgetConfigProvider>

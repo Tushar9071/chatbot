@@ -5,7 +5,6 @@ import "./App.css";
 import Chatbox from "./components/whatsapp/chatbox";
 import FloatingIcon from "./components/whatsapp/floatingIcon";
 import { useWidgetConfig } from "./context/WidgetConfigContext";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 function App() {
   const { id, name } = useWidgetConfig();
@@ -14,7 +13,6 @@ function App() {
 
   return (
     <>
-      <SpeedInsights />
 
       <AnimatePresence>{toggel && <Chatbox key="chatbox" />}</AnimatePresence>
       <FloatingIcon setToggle={setToggle} toggel={toggel} />
