@@ -8,7 +8,7 @@ export const WidgetConfigProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const config = window.MyWidgetConfig || {};
+  const config = window.MyWidgetConfig || { id: 1, name: "Default Widget" };
   return (
     <WidgetConfigContext.Provider value={config}>
       {children}
