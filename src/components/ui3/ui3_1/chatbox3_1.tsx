@@ -7,7 +7,7 @@ import logo2 from "../../../assets/logo2.png";
 import { motion } from "framer-motion";
 import ChatInput from "../../chatInput";
 
-const Chatbox2_2 = () => {
+const Chatbox3_1 = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,10 @@ const Chatbox2_2 = () => {
             {/* Left-aligned message */}
             <div className="flex justify-start">
               <div className="bg-white max-w-60 px-3 py-2 pb-5 rounded-md relative">
-                <p className="text-sm">Good morning, how can I help you</p>
+                <p className="text-sm">
+                  Hi there 👋 <br />
+                  How can I help you today?
+                </p>{" "}
                 <span className="text-[10px] text-gray-500 absolute bottom-1 right-2">
                   09:41 AM
                 </span>
@@ -67,14 +70,10 @@ const Chatbox2_2 = () => {
               </button>
             </div>
           </div>
-
-          <p className="flex gap-1 text-xs text-[#6B7280] justify-center">
-            Powered by <span className="text-[#034737]">Liliya.io</span>
-          </p>
         </div>
       </div>
     </motion.div>
   );
 };
 
-export default Chatbox2_2;
+export default Chatbox3_1;

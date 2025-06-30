@@ -7,7 +7,7 @@ import logo2 from "../../../assets/logo2.png";
 import { motion } from "framer-motion";
 import ChatInput from "../../chatInput";
 
-const Chatbox2_2 = () => {
+const Chatbox3_2 = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -38,8 +38,10 @@ const Chatbox2_2 = () => {
             {/* Left-aligned message */}
             <div className="flex justify-start">
               <div className="bg-white max-w-60 px-3 py-2 pb-5 rounded-md relative">
-                <p className="text-sm">Good morning, how can I help you</p>
-                <span className="text-[10px] text-gray-500 absolute bottom-1 right-2">
+<p className="text-sm">
+                  Hi there 👋 <br />
+                  How can I help you today?
+                </p>                <span className="text-[10px] text-gray-500 absolute bottom-1 right-2">
                   09:41 AM
                 </span>
                 <div className="absolute -left-2 top-3 w-0 h-0 border-t-8 border-b-8 border-r-8 border-transparent border-r-white"></div>
@@ -59,22 +61,19 @@ const Chatbox2_2 = () => {
           </div>
         </div>
         <div className="w-full bg-white flex flex-col justify-center py-2 gap-2">
-          <div className="px-5 flex flex-col gap-1">
-            <ChatInput />
+          <div className="px-5 flex flex-col gap-3">
+            <ChatInput sendButton={true} />
             <div className="flex justify-center">
-              <button className="bg-[#25D366] w-full px-8 py-2 rounded-full relative  flex flex-row justify-center items-center gap-2">
-                <p className="text-sm text-white font-bold">Send a message</p>
-              </button>
+              <div className="bg-[#25D366]  px-6 py-2 rounded-full relative  flex flex-row justify-between items-center gap-2">
+                <img src={logo2} className="h-5 w-5"></img>
+                <p className="text-sm  text-white">Chat On WhatsApp</p>
+              </div>
             </div>
           </div>
-
-          <p className="flex gap-1 text-xs text-[#6B7280] justify-center">
-            Powered by <span className="text-[#034737]">Liliya.io</span>
-          </p>
         </div>
       </div>
     </motion.div>
   );
 };
 
-export default Chatbox2_2;
+export default Chatbox3_2;
