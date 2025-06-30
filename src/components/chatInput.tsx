@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from "react";
-
 const ChatInput = ({ sendButton = false }: { sendButton?: boolean }) => {
   const [message, setMessage] = useState("");
   const textareaRef = useRef<HTMLTextAreaElement>(null);
@@ -7,20 +6,19 @@ const ChatInput = ({ sendButton = false }: { sendButton?: boolean }) => {
   useEffect(() => {
     const textarea = textareaRef.current;
     if (textarea) {
-      textarea.style.height = "auto"; // Reset height
-      textarea.style.height = `${textarea.scrollHeight}px`; // Grow based on content
+      textarea.style.height = "auto";
+      textarea.style.height = `${textarea.scrollHeight}px`;
     }
   }, [message]);
 
   return (
     <div className="bottom-0 flex justify-center items-center">
-      <div className="bg-white w-full rounded-2xl overflow-hidden flex items-center px-1 py-1 border border-[#E5E7EB]">
-        {/* Add button */}
-        <button className="mr-2 hover:bg-gray-200 h-7 w-7 rounded-full flex justify-center items-center duration-300 p-1.5">
+      <div className="bg-white w-full rounded-full overflow-hidden flex items-center px-1 py-1 border border-[#E5E7EB]">
+        <button className="mx-2 hover:bg-gray-200 h-7 w-7 rounded-full flex justify-center items-center duration-300 p-1.5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
+            width="20"
+            height="22"
             viewBox="0 0 24 24">
             <g
               fill="none"
@@ -35,7 +33,6 @@ const ChatInput = ({ sendButton = false }: { sendButton?: boolean }) => {
           </svg>
         </button>
 
-        {/* Centered textarea */}
         <div className="flex-grow flex items-center">
           <textarea
             ref={textareaRef}
@@ -47,7 +44,6 @@ const ChatInput = ({ sendButton = false }: { sendButton?: boolean }) => {
           />
         </div>
 
-        {/* Send button */}
         {sendButton && (
           <button
             onClick={() => {

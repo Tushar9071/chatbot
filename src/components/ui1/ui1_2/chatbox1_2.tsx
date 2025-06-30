@@ -13,11 +13,9 @@ const Chatbox1_2 = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.1 }}
-      className="fixed bottom-20 bg-transparent right-6 rounded-full"
-    >
+      className="fixed bottom-20 bg-transparent right-6 rounded-full">
       <div
-        className={`sm:bottom-[70px] right-6 z-50 h-auto w-auto  rounded-2xl shadow-lg overflow-hidden`}
-      >
+        className={`sm:bottom-[70px] right-6 z-50 h-auto w-auto  rounded-2xl shadow-lg overflow-hidden`}>
         <nav className="flex items-center px-5 py-3 bg-[#075E54]">
           <button className="rounded-full w-10 h-10 bg-white ml-2 overflow-hidden">
             <img className="h-full w-full" src={EmmaImage} alt="Image" />
@@ -26,7 +24,7 @@ const Chatbox1_2 = () => {
             <h2 className="text-base text-white font-semibold">
               Liliya Support
             </h2>
-            <p className=" text-xs text-gray-200">AI Chatbot Assistant</p>
+            <p className=" text-xs text-gray-200">Typically replies within a few minutes</p>
           </div>
         </nav>
         <div
@@ -34,17 +32,19 @@ const Chatbox1_2 = () => {
           style={{
             backgroundImage: `url(${background})`,
             backgroundSize: "cover",
-          }}
-        >
+          }}>
           <div className="flex flex-col w-80  gap-4 rounded-lg px-5">
             {/* Left-aligned message */}
             <div className="flex justify-start">
               <div className="bg-white max-w-60 px-3 py-2 pb-5 rounded-md relative">
-                <p className="text-sm">Good morning, how can I help you</p>
+                <p className="text-sm">
+                  Hi there 👋 <br />
+                  How can I help you today?
+                </p>{" "}
                 <span className="text-[10px] text-gray-500 absolute bottom-1 right-2">
                   09:41 AM
                 </span>
-                <div className="absolute -left-2 top-3 w-0 h-0 border-t-8 border-b-8 border-r-8 border-transparent border-r-white"></div>
+                <div className="absolute -left-2 top-3 w-0 h-0 border-t-4 border-b-4 border-r-8 border-transparent border-r-white"></div>
               </div>
             </div>
 
@@ -68,7 +68,7 @@ const Chatbox1_2 = () => {
             </div>
           </div>
           <p className="flex gap-1 text-xs text-[#6B7280] justify-center">
-            Powered by <span className="text-[#034737]">Liliya.io</span>
+            Powered by <span className="text-[#034737] font-medium">Liliya.io</span>
           </p>
         </div>
       </div>

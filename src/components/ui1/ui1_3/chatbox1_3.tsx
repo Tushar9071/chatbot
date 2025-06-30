@@ -26,7 +26,7 @@ const Chatbox1_3 = () => {
             <h2 className="text-base text-white font-semibold">
               Liliya Support
             </h2>
-            <p className=" text-xs text-gray-200">AI Chatbot Assistant</p>
+            <p className=" text-xs text-gray-200">Typically replies within a few minutes</p>
           </div>
         </nav>
         <div
@@ -40,8 +40,10 @@ const Chatbox1_3 = () => {
             {/* Left-aligned message */}
             <div className="flex justify-start">
               <div className="bg-white max-w-60 px-3 py-2 pb-5 rounded-md relative">
-                <p className="text-sm">Good morning, how can I help you</p>
-                <span className="text-[10px] text-gray-500 absolute bottom-1 right-2">
+<p className="text-sm">
+                  Hi there 👋 <br />
+                  How can I help you today?
+                </p>{" "}                <span className="text-[10px] text-gray-500 absolute bottom-1 right-2">
                   09:41 AM
                 </span>
                 <div className="absolute -left-2 top-3 w-0 h-0 border-t-8 border-b-8 border-r-8 border-transparent border-r-white"></div>
@@ -61,14 +63,14 @@ const Chatbox1_3 = () => {
             <div className="flex justify-center">
               <div className="bg-[#25D366]  px-6 py-2 rounded-full relative  flex flex-row justify-between items-center gap-2">
                 <img src={logo2} className="h-5 w-5"></img>
-                <p className="text-sm  text-white">Chat On WhatsApp</p>
+                <p className="text-sm font-semibold  text-white">Chat On WhatsApp</p>
               </div>
             </div>
           </div>
         </div>
         <div className="w-full bg-white flex justify-center py-2">
           <p className="flex gap-1 text-xs text-[#6B7280]">
-            Powered by <span className="text-[#034737]">Liliya.io</span>
+            Powered by <span className="text-[#034737] font-medium">Liliya.io</span>
           </p>
         </div>
       </div>

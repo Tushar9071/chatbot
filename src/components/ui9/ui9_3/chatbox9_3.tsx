@@ -4,9 +4,8 @@ import EmmaImage from "../../../assets/EmmaAvatar.png";
 // import harshpatel from "../../assets/harshpatel.png";
 // import priyapatel from "../../assets/priyapatel.png";
 import { motion } from "framer-motion";
-import ChatInput from "../../chatInput";
 
-const Chatbox2_2 = () => {
+const Chatbox9_3 = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -24,7 +23,7 @@ const Chatbox2_2 = () => {
             <h2 className="text-base text-white font-semibold">
               Liliya Support
             </h2>
-            <p className=" text-xs text-gray-200">Typically replies within a few minutes</p>
+            <p className=" text-xs text-gray-200">AI Chatbot Assistant</p>
           </div>
         </nav>
         <div
@@ -35,15 +34,22 @@ const Chatbox2_2 = () => {
           }}>
           <div className="flex flex-col w-80  gap-4 rounded-lg px-5">
             {/* Left-aligned message */}
-            <div className="flex justify-start">
+            <div className="flex justify-start flex-col max-w-60 gap-1.5">
               <div className="bg-white max-w-60 px-3 py-2 pb-5 rounded-md relative">
-<p className="text-sm">
+                <p className="text-sm">
                   Hi there 👋 <br />
                   How can I help you today?
-                </p>{" "}                <span className="text-[10px] text-gray-500 absolute bottom-1 right-2">
+                </p>{" "}
+                <span className="text-[10px] text-gray-500 absolute bottom-1 right-2">
                   09:41 AM
                 </span>
-                <div className="absolute -left-2 top-3 w-0 h-0 border-t-8 border-b-8 border-r-8 border-transparent border-r-white"></div>
+                <div className="absolute -left-2 top-3 w-0 h-0 border-t-4 border-b-4 border-r-8 border-transparent border-r-white"></div>
+              </div>
+              <div className="flex gap-1.5">
+                <button className="bg-[#F4FDE4] rounded-lg p-1.5 w-2/3 font-normal text-sm">
+                  Chat with Us
+                </button>
+                <button className="bg-[#F4FDE4] rounded-lg p-1.5 w-1/3 text-sm font-normal">Close</button>
               </div>
             </div>
 
@@ -59,18 +65,9 @@ const Chatbox2_2 = () => {
             </div> */}
           </div>
         </div>
-        <div className="w-full bg-white flex flex-col justify-center py-2 gap-2">
-          <div className="px-5 flex flex-col gap-1">
-            <ChatInput />
-            <div className="flex justify-center">
-              <button className="bg-[#25D366] w-full px-8 py-2 rounded-full relative  flex flex-row justify-center items-center gap-2">
-                <p className="text-sm text-white font-bold">Send a message</p>
-              </button>
-            </div>
-          </div>
-
-          <p className="flex gap-1 text-xs text-[#6B7280] justify-center">
-            Powered by <span className="text-[#034737]">Liliya.io</span>
+        <div className="w-full bg-white flex justify-center py-2">
+          <p className="flex gap-1 text-xs text-[#6B7280]">
+            Powered by <span className="text-[#034737] font-medium">Liliya.io</span>
           </p>
         </div>
       </div>
@@ -78,4 +75,4 @@ const Chatbox2_2 = () => {
   );
 };
 
-export default Chatbox2_2;
+export default Chatbox9_3;
