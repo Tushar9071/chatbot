@@ -1,7 +1,6 @@
 // import "./chatbox.css";
 import background from "../../../assets/background.png";
 import EmmaImage from "../../../assets/EmmaAvatar.png";
-import logo2 from "../../../assets/logo2.png";
 // import harshpatel from "../../assets/harshpatel.png";
 // import priyapatel from "../../assets/priyapatel.png";
 import { motion } from "framer-motion";

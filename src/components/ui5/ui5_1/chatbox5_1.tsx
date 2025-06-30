@@ -14,7 +14,7 @@ const Chatbox5_1 = () => {
       transition={{ duration: 0.1 }}
       className="fixed bottom-20 bg-transparent right-6 rounded-full">
       <div
-        className={`sm:bottom-[70px] right-6 z-50 h-auto w-auto  rounded-2xl border-secondary border overflow-hidden`}>
+        className={`sm:bottom-[70px] right-6 z-50 h-auto w-auto  rounded-2xl shadow-lg overflow-hidden`}>
         <nav className="flex items-center px-5 py-3 bg-[#075E54]">
           <button
             className="rounded-full w-10 h-10 bg-white ml-2 overflow-hidden"
