@@ -4,25 +4,16 @@ import { useState } from "react";
 import "./App.css";
 import Chatbox from "./components/ui/chatbox";
 import FloatingIcon from "./components/ui/floatingIcon";
-import { useWidgetConfig } from "./context/WidgetConfigContext";
+import { useLayOutConfig } from "./context/layoutContext";
 import Chatbox1_3 from "./components/ui1/ui1_3/chatbox1_3";
-import FloatingIcon1_3 from "./components/ui1/ui1_3/floatingIcon1_3";
 import Chatbox1_2 from "./components/ui1/ui1_2/chatbox1_2";
-import FloatingIcon1_2 from "./components/ui1/ui1_2/floatingIcon1_2";
 import Chatbox1_1 from "./components/ui1/ui1_1/chatbox1_1";
-import FloatingIcon1_1 from "./components/ui1/ui1_1/floatingIcon1_1";
 import Chatbox2_1 from "./components/ui2/ui2_1/chatbox2_1";
 import Chatbox2_2 from "./components/ui2/ui2_2/chatbox2_2";
 import Chatbox2_3 from "./components/ui2/ui2_3/chatbox2_3";
-import FloatingIcon2_1 from "./components/ui2/ui2_1/floatingIcon2_1";
-import FloatingIcon2_2 from "./components/ui2/ui2_2/floatingIcon2_2";
-import FloatingIcon2_3 from "./components/ui2/ui2_3/floatingIcon2_3";
 import Chatbox3_1 from "./components/ui3/ui3_1/chatbox3_1";
-import FloatingIcon3_1 from "./components/ui3/ui3_1/floatingIcon3_1";
 import Chatbox3_2 from "./components/ui3/ui3_2/chatbox3_2";
-import FloatingIcon3_2 from "./components/ui3/ui3_2/floatingIcon3_2";
 import Chatbox3_3 from "./components/ui3/ui3_3/chatbox3_3";
-import FloatingIcon3_3 from "./components/ui3/ui3_3/floatingIcon3_3";
 import Chatbox4_1 from "./components/ui4/ui4_1/chatbox4_1";
 import Chatbox4_2 from "./components/ui4/ui4_2/chatbox4_2";
 import Chatbox4_3 from "./components/ui4/ui4_3/chatbox4_3";
@@ -41,85 +32,86 @@ import Chatbox9_3 from "./components/ui9/ui9_3/chatbox9_3";
 import Chatbox9_4 from "./components/ui9/ui9_4/chatbox9_4";
 
 function App() {
-  const { id, name } = useWidgetConfig();
+  const { chatIconLayout } = useLayOutConfig();
+  console.log(chatIconLayout);
+
   const [toggel, setToggle] = useState(false);
-  console.log(id, name);
 
   return (
     <>
-      {id === 1.1 && (
+      {chatIconLayout.id === 1.1 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox1_1 key={"chatbox"} />}
           </AnimatePresence>
-          <FloatingIcon1_1 setToggle={setToggle} toggel={toggel} />
+          <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 1.2 && (
+      {chatIconLayout.id === 1.2 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox1_2 key={"chatbox"} />}
           </AnimatePresence>
-          <FloatingIcon1_2 setToggle={setToggle} toggel={toggel} />
+          <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 1.3 && (
+      {chatIconLayout.id === 1.3 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox1_3 key={"chatbox"} />}
           </AnimatePresence>
-          <FloatingIcon1_3 setToggle={setToggle} toggel={toggel} />
+          <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 2.1 && (
+      {chatIconLayout.id === 2.1 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox2_1 key={"chatbox"} />}
           </AnimatePresence>
-          <FloatingIcon2_1 setToggle={setToggle} toggel={toggel} />
+          <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 2.2 && (
+      {chatIconLayout.id === 2.2 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox2_2 key={"chatbox"} />}
           </AnimatePresence>
-          <FloatingIcon2_2 setToggle={setToggle} toggel={toggel} />
+          <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 2.3 && (
+      {chatIconLayout.id === 2.3 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox2_3 key={"chatbox"} />}
           </AnimatePresence>
-          <FloatingIcon2_3 setToggle={setToggle} toggel={toggel} />
+          <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 3.1 && (
+      {chatIconLayout.id === 3.1 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox3_1 key={"chatbox"} />}
           </AnimatePresence>
-          <FloatingIcon3_1 setToggle={setToggle} toggel={toggel} />
+          <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 3.2 && (
+      {chatIconLayout.id === 3.2 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox3_2 key={"chatbox"} />}
           </AnimatePresence>
-          <FloatingIcon3_2 setToggle={setToggle} toggel={toggel} />
+          <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 3.3 && (
+      {chatIconLayout.id === 3.3 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox3_3 key={"chatbox"} />}
           </AnimatePresence>
-          <FloatingIcon3_3 setToggle={setToggle} toggel={toggel} />
+          <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 4.1 && (
+      {chatIconLayout.id === 4.1 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox4_1 key={"chatbox"} />}
@@ -127,7 +119,7 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 4.2 && (
+      {chatIconLayout.id === 4.2 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox4_2 key={"chatbox"} />}
@@ -135,7 +127,7 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 4.3 && (
+      {chatIconLayout.id === 4.3 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox4_3 key={"chatbox"} />}
@@ -143,7 +135,7 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 5.1 && (
+      {chatIconLayout.id === 5.1 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox5_1 key={"chatbox"} />}
@@ -151,7 +143,7 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 5.2 && (
+      {chatIconLayout.id === 5.2 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox5_2 key={"chatbox"} />}
@@ -159,7 +151,7 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 5.3 && (
+      {chatIconLayout.id === 5.3 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox5_3 key={"chatbox"} />}
@@ -167,7 +159,7 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 6.1 && (
+      {chatIconLayout.id === 6.1 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox6_1 key={"chatbox"} />}
@@ -175,7 +167,7 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 7.1 && (
+      {chatIconLayout.id === 7.1 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox7_1 key={"chatbox"} />}
@@ -183,7 +175,7 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 7.2 && (
+      {chatIconLayout.id === 7.2 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox7_2 key={"chatbox"} />}
@@ -191,7 +183,7 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 8.1 && (
+      {chatIconLayout.id === 8.1 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox8_1 key={"chatbox"} />}
@@ -199,7 +191,7 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 8.2 && (
+      {chatIconLayout.id === 8.2 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox8_2 key={"chatbox"} />}
@@ -207,7 +199,7 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 8.3 && (
+      {chatIconLayout.id === 8.3 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox8_3 key={"chatbox"} />}
@@ -215,7 +207,7 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 9.1 && (
+      {chatIconLayout.id === 9.1 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox9_1 key={"chatbox"} />}
@@ -223,7 +215,7 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 9.2 && (
+      {chatIconLayout.id === 9.2 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox9_2 key={"chatbox"} />}
@@ -231,7 +223,7 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 9.3 && (
+      {chatIconLayout.id === 9.3 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox9_3 key={"chatbox"} />}
@@ -239,7 +231,7 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      {id === 9.4 && (
+      {chatIconLayout.id === 9.4 && (
         <>
           <AnimatePresence>
             {toggel && <Chatbox9_4 key={"chatbox"} />}
@@ -247,12 +239,8 @@ function App() {
           <FloatingIcon setToggle={setToggle} toggel={toggel} />
         </>
       )}
-      
 
-      
-
-
-      {id === 10 && (
+      {chatIconLayout.id === 10 && (
         <>
           {" "}
           <AnimatePresence>

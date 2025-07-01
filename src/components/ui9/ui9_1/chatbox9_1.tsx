@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import chatIcon from "../../../assets/chatIcon.png";
-import logo2 from "../../../assets/logo2.png";
 
 const Chatbox9_1 = () => {
   return (

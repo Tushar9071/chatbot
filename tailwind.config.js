@@ -8,10 +8,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--color-primary)",
-        secondary: "var(--color-secondary)",
-        bg_primary: "var(--color-background-primary)",
-        bg_secondary: "var(--color-background-secondary)",
+        // primary: "var(--color-primary)",
+        // secondary: "var(--color-secondary)",
+        // bg_primary: "var(--color-background-primary)",
+        // bg_secondary: "var(--color-background-secondary)",
+        chatButtonBgPrimary: "var(--chat-button-bg-primary)",
+        brandBoxBgPrimary: "var(--brand-bg-primary)",
+        chatButtonBgSecondary: "var(--chat-button-bg-secondary)",
+        brandBoxBgSecondary: "var(--brand-bg-secondary)",
       },
     },
   },

@@ -6,7 +6,7 @@ interface Props {
 const FloatingIcon = ({ toggel, setToggle }: Props) => {
   return (
     <button
-      className="fixed bg-green-600 bottom-4 right-4 z-50 p-2 rounded-full shadow-lg transition-colors duration-300 cursor-pointer"
+      className="fixed bg-chatButtonBgPrimary bottom-4 right-4 z-50 p-2 rounded-full shadow-lg transition-colors duration-300 cursor-pointer"
       onClick={() => setToggle((prev) => !prev)}
     >
       <div className="relative w-[30px] h-[30px]">
