@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
-import logo2 from "../../../assets/logo2.png";
+import { useLayOutConfig } from "../../../context/layoutContext";
+import ChatOnWhatsapp from "../../chatOnWhatsapp";
 
 const Chatbox9_2 = () => {
+  const { chatBoxLayout } = useLayOutConfig();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -12,19 +15,18 @@ const Chatbox9_2 = () => {
       <div className="relative w-80 py-8 px-10 border-2 border-gray-500 rounded-lg  bg-white text-sm flex flex-col gap-5">
         <div>
           <p className="break-words text-black font-medium">
-            Need support? <br />
-            Liliya.io is always here for you.
+            {chatBoxLayout.welcomeText?.split("\n").map((line) => {
+              return (
+                <span key={line}>
+                  {line}
+                  <br />
+                </span>
+              );
+            })}
           </p>
         </div>
         <div className="w-full">
-          <div className="flex justify-center">
-            <div className="bg-[#25D366] w-full px-6 py-2 rounded-xl relative  flex flex-row justify-center items-center gap-3">
-              <img src={logo2} className="h-5 w-5"></img>
-              <p className="text-base font-semibold  text-white">
-                Chat On WhatsApp
-              </p>
-            </div>
-          </div>
+          <ChatOnWhatsapp justify="center" radius="xl"/>
         </div>
         {/* chat arrow */}
         <div className="absolute -bottom-[27px] right-2 w-[21px] h-[27px] bg-white border-r-2 border-r-gray-500"></div>

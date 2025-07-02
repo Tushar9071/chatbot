@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
-import chatIcon from "../../../assets/chatIcon.png";
+import { useLayOutConfig } from "../../../context/layoutContext";
 
 const Chatbox9_1 = () => {
+  const { chatBoxLayout } = useLayOutConfig();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -11,18 +13,28 @@ const Chatbox9_1 = () => {
       className="fixed bottom-24 bg-transparent right-7 rounded-full">
       <div className="relative w-80 py-8 px-10 border-2 border-gray-500 rounded-lg  bg-white text-sm flex flex-col gap-5">
         <div>
-          <img src={chatIcon} className="h-10"></img>
+          <img src={chatBoxLayout.brandImg} className="h-10"></img>
         </div>
         <div>
           <p className="break-words text-black font-medium">
-            Need support? <br />
-            Liliya.io is always here for you.
+            {chatBoxLayout.welcomeText?.split("\n").map((line) => {
+              return (
+                <span key={line}>
+                  {line}
+                  <br />
+                </span>
+              );
+            })}
           </p>
         </div>
         <div className="w-full">
           <div className="flex flex-row gap-1">
-            <button className="w-2/3 bg-[#25CF43] p-2 rounded-lg font-semibold text-white">Chat with Us</button>
-            <button className="bg-[#E3E3E3] w-1/3 rounded-lg font-normal">Close</button>
+            <button className="w-2/3 bg-brandBoxBgPrimary p-2 rounded-lg font-semibold text-white">
+              Chat with Us
+            </button>
+            <button className="bg-[#E3E3E3] w-1/3 rounded-lg font-normal">
+              Close
+            </button>
           </div>
         </div>
         <p className="text-center text-gray-500">

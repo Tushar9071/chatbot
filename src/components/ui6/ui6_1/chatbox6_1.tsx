@@ -4,6 +4,7 @@ import EmmaImage from "../../../assets/EmmaAvatar.png";
 import harshpatel from "../../../assets/harshpatel.png";
 import priyapatel from "../../../assets/priyapatel.png";
 import { motion } from "framer-motion";
+import HorizontalUsers from "../../horizontalUsers";
 
 const Chatbox6_1 = () => {
   return (
@@ -21,27 +22,8 @@ const Chatbox6_1 = () => {
             backgroundImage: `url(${background})`,
             backgroundSize: "cover",
           }}>
-          <div className="flex flex-col items-center w-80  gap-5 rounded-lg">
-            {/* Left-aligned message */}
-            {/* <div className="flex justify-start">
-            <div className="bg-white max-w-60 px-3 py-2 pb-5 rounded-md relative">
-              <p className="text-sm">Good morning, how can I help you</p>
-              <span className="text-[10px] text-gray-500 absolute bottom-1 right-2">
-                09:41 AM
-              </span>
-            </div>
-          </div> */}
-
-            {/* Right-aligned message */}
-            {/* <div className="flex justify-end">
-            <div className="bg-[#d8fcd2] max-w-60 px-3 py-2 pb-5 rounded-md relative">
-              <p className="text-sm mr-5">Hello</p>
-              <span className="text-[10px] text-gray-500 absolute bottom-1 right-2">
-                09:42 AM
-              </span>
-            </div>
-          </div> */}
-            <nav className="flex items-center px-3   py-3 bg-[#075E54] w-[90%] rounded-lg gap-">
+          <div className="flex flex-col items-center w-80  gap-5 rounded-3xl">
+            <nav className="flex items-center px-3   py-3 bg-brandBoxBgPrimary w-[90%] rounded-2xl">
               <button
                 className="rounded-full w-10 h-10 bg-white ml-2 overflow-hidden"
                 // onClick={() => toggel(false)}
@@ -63,32 +45,20 @@ const Chatbox6_1 = () => {
               </div>
             </nav>
 
-            <div className="h-[60px] w-[90%] bg-white/20 flex items-center justify-center rounded-lg px-3 cursor-pointer backdrop-blur-[1px] border border-white/30 p-4 border-l-4 rounded-tl-lg rounded-bl-lg border-l-green-500">
-              <div className="rounded-full h-[40px] w-[40px] overflow-hidden">
-                <img src={harshpatel} className="h-full w-full" />
-              </div>
-              <div className="w-[80%] px-5">
-                <h4 className="text-sm">Harsh Patel</h4>
-                <p className="text-xs text-gray-500">Software Engineer</p>
-                <div className="flex flex-row items-center gap-1">
-                  <div className="w-[5px] h-[5px] bg-green-500 rounded-full"></div>
-                  <p className="text-xs text-green-500 ">Online</p>
-                </div>
-              </div>
-            </div>
-            <div className="h-[60px] w-[90%] bg-white/20 flex items-center justify-center rounded-lg px-3 cursor-pointer backdrop-blur-[1px] border border-white/30 p-4 border-l-4 rounded-tl-lg rounded-bl-lg border-l-green-500">
-              <div className="rounded-full h-[40px] w-[40px] overflow-hidden">
-                <img src={priyapatel} className="h-full w-full" />
-              </div>
-              <div className="w-[80%] px-5">
-                <h4 className="text-sm">Harsh Patel</h4>
-                <p className="text-xs text-gray-500">Software Engineer</p>
-                <div className="flex flex-row items-center gap-1">
-                  <div className="w-[5px] h-[5px] bg-green-500 rounded-full"></div>
-                  <p className="text-xs text-green-500 ">Online</p>
-                </div>
-              </div>
-            </div>
+            <HorizontalUsers
+              image={harshpatel}
+              name="Harsh Patel"
+              profession="Software Engineer"
+              status="Online"
+              isTrnsparent={true}
+            />
+            <HorizontalUsers
+              image={priyapatel}
+              name="Priya Patel"
+              profession="Software Engineer"
+              status="Online"
+              isTrnsparent={true}
+            />
           </div>
         </div>
         <div className="w-full bg-white flex justify-center py-2">

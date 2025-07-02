@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
-import chatIcon from "../../../assets/chatIcon.png";
-import logo2 from "../../../assets/logo2.png";
+
+import { useLayOutConfig } from "../../../context/layoutContext";
+import ChatOnWhatsapp from "../../chatOnWhatsapp";
 
 const Chatbox8_3 = () => {
+  const { chatBoxLayout } = useLayOutConfig();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -12,23 +15,22 @@ const Chatbox8_3 = () => {
       className="fixed bottom-24 bg-transparent right-8">
       <div className="relative w-80 py-8 px-10 shadow-[0_15px_60px_0_#00000033] rounded-2xl  bg-white text-sm flex flex-col gap-5">
         <div>
-          <img src={chatIcon} className="h-10"></img>
+          <img src={chatBoxLayout.brandImg} className="h-10"></img>
         </div>
         <div>
           <p className="break-words text-black font-medium">
-            Need support? <br />
-            Liliya.io is always here for you.
+            {chatBoxLayout.welcomeText?.split("\n").map((line) => {
+              return (
+                <span key={line}>
+                  {line}
+                  <br />
+                </span>
+              );
+            })}
           </p>
         </div>
         <div className="w-full">
-          <div className="flex justify-center">
-            <div className="w-full px-6 py-2 rounded-xl relative  flex flex-row justify-center items-center gap-3 border-2 border-[#25D366]">
-              <img src={logo2} className="h-5 w-5"></img>
-              <p className="text-base font-semibold  text-[#25D366]">
-                Chat On WhatsApp
-              </p>
-            </div>
-          </div>
+          <ChatOnWhatsapp radius="xl" justify="center" isForBorder={true} />
         </div>
         <p className="text-center text-gray-500">
           Powered by <span className="text-[#034737]">liliya.io</span>

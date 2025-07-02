@@ -15,7 +15,7 @@ const Chatbox9_4 = () => {
       className="fixed bottom-20 bg-transparent right-6 rounded-full">
       <div
         className={`sm:bottom-[70px] right-6 z-50 h-auto w-auto  rounded-2xl shadow-lg overflow-hidden`}>
-        <nav className="flex items-center px-5 py-3 bg-[#075E54]">
+        <nav className="flex items-center px-5 py-3 bg-brandBoxBgPrimary">
           <div className="flex flex-row gap-1.5 items-center">
             <img src={liliya_logo}></img>
             <p className="text-white font-semibold inline-block ">liliya.io</p>
