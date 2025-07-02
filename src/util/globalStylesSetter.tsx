@@ -11,6 +11,13 @@ const GlobalStylesSetter = () => {
       );
     }
 
+    if (window.brandOptions?.backgroundsecondaryColor) {
+      root.style.setProperty(
+        "--brand-bg-secondary",
+        window.brandOptions.backgroundsecondaryColor
+      );
+    }
+
     if (window.brandOptions?.backgroundprimaryColor) {
       root.style.setProperty(
         "--brand-bg-primary",

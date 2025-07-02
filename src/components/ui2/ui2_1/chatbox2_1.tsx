@@ -1,10 +1,8 @@
 // import "./chatbox.css";
 import background from "../../../assets/background.png";
-import EmmaImage from "../../../assets/EmmaAvatar.png";
-import logo2 from "../../../assets/logo2.png";
-// import harshpatel from "../../assets/harshpatel.png";
-// import priyapatel from "../../assets/priyapatel.png";
 import { motion } from "framer-motion";
+import ChatHeader from "../../chatHeader";
+import ChatOnWhatsapp from "../../chatOnWhatsapp";
 
 const Chatbox2_1 = () => {
   return (
@@ -16,19 +14,7 @@ const Chatbox2_1 = () => {
       className="fixed bottom-20 bg-transparent right-6 rounded-full">
       <div
         className={`sm:bottom-[70px] right-6 z-50 h-auto w-auto  rounded-2xl shadow-lg overflow-hidden`}>
-        <nav className="flex items-center px-5 py-3 bg-[#075E54]">
-          <button className="rounded-full w-10 h-10 bg-white ml-2 overflow-hidden">
-            <img className="h-full w-full" src={EmmaImage} alt="Image" />
-          </button>
-          <div className="flex flex-col px-5 gap-[2px]">
-            <h2 className="text-base text-white font-semibold">
-              Liliya Support
-            </h2>
-            <p className=" text-xs text-gray-200">
-              Typically replies within a few minutes
-            </p>
-          </div>
-        </nav>
+        <ChatHeader />
         <div
           className={`w-full py-4 `}
           style={{
@@ -61,16 +47,14 @@ const Chatbox2_1 = () => {
               </div>
             </div> */}
             <div className="flex justify-center">
-              <div className="bg-[#25D366]  px-6 py-2 rounded-full relative  flex flex-row justify-between items-center gap-2">
-                <img src={logo2} className="h-5 w-5"></img>
-                <p className="text-sm  text-white font-semibold">Chat On WhatsApp</p>
-              </div>
+              <ChatOnWhatsapp/>
             </div>
           </div>
         </div>
         <div className="w-full bg-white flex justify-center py-2">
           <p className="flex gap-1 text-xs text-[#6B7280]">
-            Powered by <span className="text-[#034737] font-medium">Liliya.io</span>
+            Powered by{" "}
+            <span className="text-[#034737] font-medium">Liliya.io</span>
           </p>
         </div>
       </div>

@@ -14,13 +14,24 @@ export const LayOutContextProvider = ({
   children: React.ReactNode;
 }) => {
   const chatIconLayout: ChatButtonOptions = window.chatButtonOptions || {
-    id: 7.1,
+    id: 1.1,
     name: "Default Widget",
+    backgroundprimaryColor: "#000000",
+    buttonText: "Chat with us",
+    position: "right",
   };
 
   const chatBoxLayout: BrandOptions = window.brandOptions || {
-    brandName: "Default Brand",
-    // backgroundprimaryColor: "#00e785",
+    brandName: "xyz",
+    brandImg:
+      "https://raw.githubusercontent.com/Tushar9071/chatbot/refs/heads/main/src/assets/chatIcon.png",
+    welcomeText: "Hi there!\nHow can I help you?",
+    // backgroundprimaryColor: "#25D366",
+    backgroundprimaryColor: "#000000",
+    backgroundsecondaryColor: "#000000",
+    textprimaryColor: "#ffffff",
+    textsecondaryColor: "#000000",
+    buttonText: "Chat with us",
   };
 
   return (
@@ -33,7 +44,9 @@ export const LayOutContextProvider = ({
 export const useLayOutConfig = (): LayoutContextType => {
   const context = useContext(LayOutContext);
   if (!context) {
-    throw new Error("useWidgetConfig must be used within a LayOutContextProvider");
+    throw new Error(
+      "useWidgetConfig must be used within a LayOutContextProvider"
+    );
   }
   return context;
 };
