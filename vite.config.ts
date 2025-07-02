@@ -17,7 +17,7 @@ export default defineConfig({
       entry: path.resolve(__dirname, "src/main.tsx"),
       formats: ["iife"],
       name: "MyWidget",
-      fileName: () => "widget.js",
+      fileName: () => "index.js",
     },
     rollupOptions: {
       output: {
