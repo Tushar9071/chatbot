@@ -4,11 +4,7 @@
 
 :root {
   --chat-button-bg-primary: #25d366;
-<<<<<<< HEAD
-  /* --chat-button-bg-secondary: #25d366; */
-=======
   --chat-button-bg-secondary: #25d366;
->>>>>>> bcd688fb32320406025e7899784d38fe356f87be
   --brand-bg-primary: #25d366;
   --brand-bg-secondary: #25d366;
 }
